@@ -4,34 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tip Calculator</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Tip Calculator</h1>
+        <div class="text-container">
+            <div class="title-container">
+                <h1>Tip Calculator</h1>
+            </div>
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" min="0" />
+            <label for="amount">Amount:<br /></label>
+            <input type="number" id="amount" min="0" />
+            <br />
+            <label for="tipPercentage">Select tip percentage:</label>
+            <div class="tip-buttons">
+                <button data-percent="0">No tip!</button>
+                <button data-percent="5">5%!</button>
+                <button data-percent="10">10%!</button>
+                <button data-percent="15">15%!</button>
+                <input type="text" id="customTipButton" placeholder="Custom" />
+            </div>
+            <button id="calculateButton">Calculate!</button>
+            <button id="resetButton">Reset!</button>
 
-        <label for="tipPercentage">Select tip percentage:</label>
-        <div class="tip-buttons">
-            <button data-percent="0">No tip!</button>
-            <button data-percent="5">5%!</button>
-            <button data-percent="10">10%!</button>
-            <button data-percent="15">15%!</button>
-            <input type="text" id="customTipButton" placeholder="Custom" />
+            <div class="result" id="result">
+                <h3>Total Amount:<span id="finalAmount"></span>RON</h3>
+            </div>
+
         </div>
-
-        <button id="calculateButton">Calculate!</button>
-        <button id="resetButton">Reset!</button>
-
-        <div class="result" id="result">
-            <p>Initial Amount:<span id="initialAmount"></span>RON</p>
-            <p>Tip Amount:<span id="tipAmount"></span>RON</p>
-            <p>Final Amount:<span id="finalAmount"></span>RON</p>
-        </div>
-
     </div>
 
     <script src="script.js"></script>
